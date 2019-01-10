@@ -1238,7 +1238,7 @@ var heroo = new Discord.RichEmbed()
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
 .setTitle('SLiver Bot Info')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot')
+.setURL('https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
 .addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
@@ -2978,5 +2978,5 @@ client.on("guildMemberAdd", member => {
 
 
 
-//MHSTR END NOW THIS IS END
+
 client.login(process.env.BOT_TOKEN);
