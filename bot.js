@@ -2542,7 +2542,7 @@ if (!message.channel.guild) return;
 
 
 
-let args = message.content.split(" ").slice(1).join(" ");
+let args = message.content.split("تم الارسال").slice(1).join("511509244315697152");
 
 
 
