@@ -2231,7 +2231,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
-  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
+  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك رجاء دخول الي سيرفر الدعم الفني https://discord.gg/pprf6Bm**`)
       guild.owner.send(embed)
 });
 
