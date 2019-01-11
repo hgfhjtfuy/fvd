@@ -479,7 +479,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل 24 ساعه 
-بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
+بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب لتشغيل الترحيب سوي روم اسمه welcome :gear: 
 **
         ***__General orders__***
 **
