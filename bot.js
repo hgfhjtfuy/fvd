@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['511509244315697152','511509244315697152'];
+const devs = ['389090790984515594','350408440566382592'];
 var prefix = "!";
 const adminprefix = "!"
 const db = require('quick.db');
@@ -68,8 +68,9 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
- 
-client.on('message', async message => {
+
+
+        client.on('message', async message => {
             if(message.content.includes('discord.gg')){
                 if(message.member.hasPermission("MANAGE_GUILD")) return;
         if(!message.channel.guild) return;
@@ -334,7 +335,7 @@ coll.first().delete()
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;	
-    var setGame = ['!inv','!help'];	
+    var setGame = ['!inv','!help','ii7MooDy'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -345,7 +346,7 @@ j = 1;
             j = -1;	
       }	
        i = i+j;	
-        client.user.setGame(setGame[i],`http://twitch.tv/S-F`);	
+        client.user.setGame(setGame[i],`https://www.twitch.tv/home`);	
 }, ms);	
 	
 });
@@ -393,6 +394,7 @@ client.on('message' , message => {
 
 
 
+
   client.on('message', msg => {
     if(msg.author.bot) return;
     
@@ -405,7 +407,7 @@ client.on('message' , message => {
           maxAge: 86400
         }).then(i => msg.channel.send(`
         **
-        Invite Link : <https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=8&scope=bot>
+        Invite Link : <https://discordapp.com/oauth2/authorize?client_id=532983755556519949&permissions=8&scope=bot}>
         Server : ${g.name} | Id : ${g.id} 
         Owner ID : ${g.owner.id}
         **
@@ -477,7 +479,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل 24 ساعه 
-بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب لتشغيل الترحيب سوي روم اسمه welcome :gear: 
+بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
 **
         ***__General orders__***
 **
@@ -500,7 +502,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
 『!roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
 『!emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
-『!say/يكرر الكلام الي تكتبو』
+『say/يكرر الكلام الي تكتبو』
 『!image/صورة السيرفر』
 『!members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
 『!id/معلومات عنك』
@@ -545,9 +547,17 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!cv <name> / انشاء رووم فويس』
 『!delet <name> / مسح الشات او الرووم فويس』
 『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
-『لمعرفه الكريدت لسه ما انضافت』
-`,`
- 
+   `,`
+        ***__Music orders__***
+**
+『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
+『${prefix}skip / لتجآوز الأغنية الحآلية』
+『${prefix}pause / إيقآف الأغنية مؤقتا』
+『${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
+『${prefix}vol / لتغيير درجة الصوت 100 - 0』
+『${prefix}stop / لإخرآج البوت من الروم』
+『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
+『${prefix}queue / لمعرفة قآئمة التشغيل』
 **
         ***__Games orders__***
  **       
@@ -869,8 +879,12 @@ const codes = {
     '#': '#⃣',
     '*': '*⃣'
   };
-
-
+  
+  'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
+    codes[c] = codes[c.toUpperCase()] = ` :regional_indicator_${c}:`;
+  });
+  
+  
   client.on('message' , async message => {
 	  var prefix = "!";
          if(message.content.startsWith(prefix + "emoji")) {
@@ -1224,7 +1238,7 @@ var heroo = new Discord.RichEmbed()
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
 .setTitle('SLiver Bot Info')
-.setURL('https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot')
+.setURL('https://discordapp.com/oauth2/authorize?client_id=532983755556519949&permissions=8&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
 .addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
@@ -1588,18 +1602,6 @@ return;
             .addField('» السيرفر :', `${message.guild.name}`)
             .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
             .addField(' » الرسالة : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
-    }
-});
-	
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
             .setColor('#ff0000')
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
@@ -2229,7 +2231,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
-  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك رجاء دخول الي سيرفر الدعم الفني https://discord.gg/pprf6Bm**`)
+  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
       guild.owner.send(embed)
 });
 
@@ -2548,7 +2550,7 @@ if (!message.channel.guild) return;
 
 
 
-let args = message.content.split("تم الارسال").slice(1).join("511509244315697152");
+let args = message.content.split(" ").slice(1).join(" ");
 
 
 
@@ -2721,7 +2723,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: click here `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=532983755556519949&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
