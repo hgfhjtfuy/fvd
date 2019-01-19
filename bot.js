@@ -2723,8 +2723,8 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: click here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
+        .setURL(`https://discordapp.com/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot`)
+        .setThumbnail(" https://discordapp.com/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot")        
      message.channel.sendEmbed(embed);
        }
    });
