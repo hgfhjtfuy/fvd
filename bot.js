@@ -346,7 +346,7 @@ j = 1;
             j = -1;	
       }	
        i = i+j;	
-        client.user.setGame(setGame[i],`https://www.twitch.tv/`);	
+        client.user.setGame(setGame[i],`https://www.twitch.tv/reveetgr`);	
 }, ms);	
 	
 });
