@@ -2166,8 +2166,6 @@ function getValue(key, array) {
     }
   }
 }
-client.on('message', message => {
-var prefix = "!";
 
    client.on('message',async message => {
   if(message.channel.type === 'dm') return;
