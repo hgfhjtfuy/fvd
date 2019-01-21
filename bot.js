@@ -405,7 +405,7 @@ client.on('ready', () => {//new ready event
                       role.edit({color : "RANDOM"});
                   };
       });
-  }, 1000);//the rainbow time
+  }, 5000);//the rainbow time
 })
 client.on('roleUpdate', (oldRole, newRole) => {
  
