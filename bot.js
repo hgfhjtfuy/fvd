@@ -68,7 +68,27 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
+client.on("guildMemberAdd", member => {
+    member.createDM().then(function (channel) {
+    return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+  :crown:اسم العضو  ${member}:crown:  
+  انت العضو رقم ${member.guild.memberCount} `) 
+  }).catch(console.error)
+  })
 
+client.on('message', function(message) {
+    if (message.channel.type === "dm") {
+        if (message.author.id === client.user.id) return;
+        var Dark = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTimestamp()
+        .setTitle('``! لقد تلقيت رساله جديدة في الخاص !``')
+        .setThumbnail(`${message.author.avatarURL}`)
+        .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
+        .setFooter(`From ${message.author.tag} (${message.author.presence.status.toUpperCase()})`)
+    client.channels.get("536930867151372288").send({embed:Dark});
+    }
+});
 
         client.on('message', async message => {
             if(message.content.includes('discord.gg')){
@@ -110,6 +130,160 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
     }
 })
 
+var guilds = {};
+client.on('message',async message => {
+ var prefix2 = '!';//البرفكس
+  if(message.content.startsWith(prefix2 + "تقديم")) {
+
+if(!message.channel.guild) return message.reply(' ');
+
+
+  let submite = message.guild.channels.find(`name`, "التقديم");
+
+  if(!submite) return message.channel.send("❌لم اجد الروم الخاص بالتقديمات");
+
+    let filter = m => m.author.id === message.author.id;
+
+    let thisMessage;
+
+    let thisFalse;
+
+    message.channel.send('📝 **| من فضلك اكتب اسمك الأن... ✏ **').then(msg => {
+
+
+
+    message.channel.awaitMessages(filter, {
+
+      max: 1,
+
+      time: 90000,
+
+      errors: ['time']
+
+    })
+
+    .then(collected => {
+
+      collected.first().delete();
+
+      thisMessage = collected.first().content;
+
+      let boi;
+
+      msg.edit('📜 **| من فضلك اكتب عمرك  الأن... ✏ **').then(msg => {
+
+
+
+          message.channel.awaitMessages(filter, {
+
+            max: 1,
+
+            time: 90000,
+
+            errors: ['time']
+
+          })
+
+          .then(collected => {
+
+            collected.first().delete();
+
+            boi = collected.first().content;
+
+            let boi2;
+
+            msg.edit('🤵 **| من فضلك اكتب من اي بلد انت الأن... ✏ **').then(msg => {
+
+
+
+              message.channel.awaitMessages(filter, {
+
+                max: 1,
+
+                time: 90000,
+
+                errors: ['time']
+
+              })
+
+              .then(collected => {
+
+                collected.first().delete();
+
+              boi2 = collected.first().content;
+
+      msg.edit('🛡 **| [ هل انت متأكد من تقديمك؟ | [ نعم ] او [ لا**');
+
+ message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
+
+        max: 1,
+
+        time: 90000,
+
+        errors: ['time']
+
+      })
+
+      .then(collected => {
+
+        if(collected.first().content === 'لا') {
+
+          msg.delete();
+
+          message.delete();
+
+          thisFalse = false;
+
+        }
+
+        if(collected.first().content === 'نعم') {
+
+          if(thisFalse === false) return;
+
+          msg.edit('🕊 **| Done ✅, تم بنجاح نشر تقديم في روم التقديمات**');
+
+          collected.first().delete();
+
+          submite.send(`@everyone | @here
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+**[ ${message.guild.name}:arrow_down: ] Submite⬇**
+
+[**اسم المقدم**]: 
+${thisMessage}
+
+[**عمره**]: 
+${boi}
+
+[**من بلد**]: 
+${boi2}
+
+[**تم التقديم بواسطة**]: 
+${message.author}
+
+[**ايدي المقدم**]: 
+${message.author.id}`);
+
+        }
+
+      }
+
+  );
+
+});
+
+    });
+
+  }
+
+    );
+
+  });
+
+}
+
+);
+
+    })}});
 
 client.on('message', async function(message) {
     	 if (!message.channel.guild) return;
