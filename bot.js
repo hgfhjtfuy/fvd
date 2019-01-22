@@ -451,6 +451,13 @@ if(message.content.startsWith("!قبول")) {
   }
 }
 });
+Client.on("guildMemberAdd", member => { 
+ /// Mal , Codes /// Galal
+  member.guild.channels.find("name","join-leave").send(member.toString() + " is de server gejoined")  /// Mal , Codes /// Galal
+  member.addRole(member.guild.roles.find("name","Mundo"));  /// Mal , Codes /// Galal
+  member.addRole(member.guild.roles.find("name","Member"));  /// Mal , Codes /// Galal
+
+});  /// Mal , Codes /// Galal
 client.on('message' , async (message) => {
 var prefix = "!"
     if(message.content.startsWith(prefix + "top")) {
