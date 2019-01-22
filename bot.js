@@ -130,7 +130,7 @@ client.on('message', function(message) {
     }
 })
 client.on('message', message => {
-    var p = message.mentions.members.first();
+    var p = message.mentions.members.irst();
     var reason = message.content.split(" ").slice(2).join(' ');
     var log = message.guild.channels.find('name', 'log');
     if(message.content.startsWith(`${prefix}warn`)){
@@ -160,7 +160,6 @@ client.on('message', message => {
         log.send({embed});
     }
 });
-
 client.on('message', message => {
     if(message.content.startsWith(prefix + 'new')) {
         let args = message.content.split(' ').slice(1).join(' ');
