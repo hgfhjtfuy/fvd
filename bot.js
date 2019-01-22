@@ -551,6 +551,29 @@ if(message.content.startsWith("!قبول")) {
   }
 }
 });
+client.on('message' , async (message) => {
+var prefix = "!"
+    if(message.content.startsWith(prefix + "top")) {
+if(message.author.bot) return;
+if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
+  var invites = await message.guild.fetchInvites();
+    invites = invites.array();
+    arraySort(invites, 'uses', { reverse: true });
+    let possibleInvites = ['User Invited |  Uses '];
+    invites.forEach(i => {
+        if (i.uses === 0) { 
+            return;
+        }
+      possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
+     //معلومه بسيطه يمديك تكرر العمليهه أكثر من مره
+    })
+    const embed = new Discord.RichEmbed()
+ .setColor('RANDOM')
+    .addField("Top Invites." ,`${(possibleInvites)}`)
+
+    message.channel.send(embed)
+    }
+});
 client.on('message',async message => {
   let mention = message.mentions.members.first();
   if(message.content.startsWith("!رفض")) {
