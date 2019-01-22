@@ -67,7 +67,39 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
     .catch(console.error)
  }
 });
-
+client.on('guildCreate', guild => {
+   
+  client.users.get("477493408370524181")
+    const MAL&OTOZX = new Discord.RichEmbed()
+    .setAuthor(`بوتك دخل سيرفر جديد مبروك ✅`)
+    .setDescription(`**
+  Server name: __${guild.name}__
+  Server id: __${guild.id}__
+  Server owner: __${guild.owner}__
+  Member Count: __${guild.memberCount}__
+  Servers Counter : __${client.guilds.size}__**`)/// Mal , Codes //// OTOZX
+          .setColor('#36393e')
+          .setFooter('mal' , client.user.avatarURL)
+         client.users.get("477493408370524181").send({MAL&OTOZX});
+})
+ 
+client.on('guildDelete', guild => {
+   
+  client.users.get("477493408370524181")
+ 
+  const MAL&OTOZX = new Discord.RichEmbed()
+  .setAuthor(`بوتك خرج من سيرفر للاسف ❎`)
+  .setDescription(`**
+ Server name: __${guild.name}__
+ Server id: __${guild.id}__
+ Server owner: __${guild.owner}__
+ Members Count: __${guild.memberCount}__
+ Servers Counter : __${client.guilds.size}__**`)
+         .setColor('#36393e')
+         .setFooter('mal' , client.user.avatarURL)
+         client.users.get("477493408370524181").send({MAL&OTOZX});
+ 
+});
 client.on("guildMemberAdd", member => {
     member.createDM().then(function (channel) {
     return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
