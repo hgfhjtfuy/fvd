@@ -2295,12 +2295,11 @@ client.on("message", message => {
       command = command.slice(prefix.length);
         if(command === "skin") {
                 const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
+        if (!args) return message.channel.send("**اكتب اسم السكن الي تبيه**");
+        const image = new Discord.Attachment(`https://minotar.net/armor/body/${args}`, "skin.png");
     message.channel.send(image)
         }
     });
-
 
 client.on('message', message => {
     if(message.content == ('!profile')) {    
