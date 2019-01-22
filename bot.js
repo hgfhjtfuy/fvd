@@ -516,8 +516,8 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
 });
 client.on('message' , async (message) => {
-var prefix = "!"
-    if(message.content.startsWith(prefix + "top")) {
+var prefix = "%"
+    if(message.content.startsWith(prefix + "topinv")) {
 if(message.author.bot) return;
 if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
   var invites = await message.guild.fetchInvites();
