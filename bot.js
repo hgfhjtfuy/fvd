@@ -70,7 +70,7 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
 client.on('guildCreate', guild => {
    
   client.users.get("477493408370524181")
-    const MAL&OTOZX = new Discord.RichEmbed()
+    const.MAL&OTOZX = new Discord.RichEmbed()
     .setAuthor(`بوتك دخل سيرفر جديد مبروك ✅`)
     .setDescription(`**
   Server name: __${guild.name}__
