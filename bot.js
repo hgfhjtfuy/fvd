@@ -452,7 +452,6 @@ if(message.content.startsWith("!قبول")) {
 }
 });
 
-});  /// Mal , Codes /// Galal
 client.on('message' , async (message) => {
 var prefix = "!"
     if(message.content.startsWith(prefix + "top")) {
