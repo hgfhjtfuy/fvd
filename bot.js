@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594','350408440566382592'];
+const devs = ['477493408370524181','477493408370524181'];
 var prefix = "!";
 const adminprefix = "!"
 const db = require('quick.db');
@@ -3566,8 +3566,8 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: click here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot`)
-        .setThumbnail(" https://discordapp.com/oauth2/authorize?client_id=532983755556519949&permissions=0&scope=bot")        
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=537238168525733898&permissions=8&scope=bot`)
+        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=537238168525733898&permissions=8&scope=bot")        
      message.channel.sendEmbed(embed);
        }
    });
