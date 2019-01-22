@@ -1168,7 +1168,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 });
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By:ii7MooDyツ,#4207'];
+    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By:ii7MooDy#0001'];
     var i = -1;
     var j = 0;
     setInterval(function (){
