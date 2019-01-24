@@ -68,7 +68,14 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
-client.on("guildMemberAdd", member => {
+cliclient.on('message', msg => {
+  const DiscordLink = [".net", ".tk", ".com"];///!                  Mal,SizGooo ツ
+  if( DiscordLink.some(word => msg.content.includes(word)) ) {
+    msg.reply(`**حبي ممنوع نشر اي روابط😂 **`)
+    msg.delete();///!                  Mal,SizGooo ツ
+
+}
+})///!                  Mal,SizGooo ツent.on("guildMemberAdd", member => {
     member.createDM().then(function (channel) {
     return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
   :crown:اسم العضو  ${member}:crown:  
@@ -127,6 +134,21 @@ Role : __${ar[message.guild.id].role}__`)
 
 
 });
+client.on('message', message => {
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith('>ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('RANDOM')
+                        .addField('**Time Taken:**',msg + " ms 📶 ")
+                        .addField('**WebSocket:**',api + " ms 📶 ")
+         message.channel.send({embed:embed});
+                        }
+                    });
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
         if (message.author.id === client.user.id) return;
