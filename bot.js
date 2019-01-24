@@ -204,7 +204,29 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
     })
     }
 }); 
+client.on("ready", async  => { /// ,Cloud‘//// ozx/////https://discord.gg/Sb4UuPB
+setInterval(function(){ /// ,Cloud‘//// ozx/////https://discord.gg/Sb4UuPB///<---more codes
+client.channels.find('id', '537968648225161236').setName("W");
+client.channels.find('id', '537968648225161236').setName("We");
+client.channels.find('id', '537968648225161236').setName("Wel");
+client.channels.find('id', '537968648225161236').setName("Welc");
+client.channels.find('id', '537968648225161236').setName("Welco");
+client.channels.find('id', '537968648225161236').setName("Welcom");
+client.channels.find('id', '537968648225161236').setName("Welcome");
+client.channels.find('id', '537968648225161236').setName("Welcome c");
+client.channels.find('id', '537968648225161236').setName("Welcome cl");
+client.channels.find('id', '537968648225161236').setName("Welcome clo");
+client.channels.find('id', '537968648225161236').setName("Welcome clou");
+client.channels.find('id', '537968648225161236').setName("Welcome To Cloud");
+client.channels.find('id', '537968648225161236').setName("Welcome To Cloud s");
+client.channels.find('id', '537968648225161236').setName("Welcome To Cloud se");
+client.channels.find('id', '537968648225161236').setName("Welcome To Cloud ser");
+client.channels.find('id', '537968648225161236').setName("Welcome To Cloud serv");
+client.channels.find('id', '537968648225161236').setName("Welcome To Cloud serve");
+client.channels.find('id', '537968648225161236').setName("Welcome To cloud server"); /// ,Cloud‘//// ozx NAME/////https://discord.gg/Sb4UuPB
 
+  }, 4000);
+});
 client.on('message', message => {
      if(!message.channel.guild) return;
                 if(message.content.startsWith(prefix + 'allbots')) {
