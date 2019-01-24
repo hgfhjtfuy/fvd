@@ -68,8 +68,6 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
-}
-})///!                  Mal,SizGooo ツent.on("guildMemberAdd", member => {
     member.createDM().then(function (channel) {
     return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
   :crown:اسم العضو  ${member}:crown:  
