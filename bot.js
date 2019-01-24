@@ -88,7 +88,7 @@ client.channels.find('id', '537968648225161236').setName("Welcome To Cloud serv"
 client.channels.find('id', '537968648225161236').setName("Welcome To Cloud serve");
 client.channels.find('id', '537968648225161236').setName("Welcome To cloud server"); /// ,Cloud‘//// ozx NAME/////https://discord.gg/Sb4UuPB
 
-  }, 4000);
+  }, 3000);
 });
 cliclient.on('message', msg => {
   const DiscordLink = [".net", ".tk", ".com"];///!                  Mal,SizGooo ツ
