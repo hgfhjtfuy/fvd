@@ -169,7 +169,6 @@ var args = message.content.split(" ").slice(1);
             SEND_MESSAGES: false,
             ADD_REACTIONS: false
           });
-      }catch(e){
         console.log(e.stack);
       }
     }
